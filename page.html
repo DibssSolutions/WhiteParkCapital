@@ -14,48 +14,76 @@
   <body>
     <!-- BEGIN content -->
     <div class="out">
-      <h1>Index page</h1>
-      <p>Hello from partials/_header.html</p>
-      <svg class="icon icon-facebook">
-        <use xlink:href="img/sprite.svg#icon-facebook"></use>
-      </svg>
-      <p>
-        <!-- begin input -->
-        <label class="checkbox">
-          <input type="checkbox" name="checkbox">
-          <span class="checkbox__text">checkbox</span>
-        </label>
-        <!-- end input -->
-      </p>
-      <p>
-        <!-- begin input -->
-        <label class="checkbox">
-          <input type="checkbox" name="exemple-name" checked>
-          <span class="checkbox__text">checkbox-checked</span>
-        </label>
-        <!-- end input -->
-      </p>
-      <!-- begin input -->
-      <label class="radio">
-        <input type="radio" name="exemple-name">
-        <span class="radio__text">text</span>
-      </label>
-      <!-- end input -->
-      <!-- begin breadcrumbs -->
-      <ul class="breadcrumbs">
-        <li class="breadcrumbs__item">
-          <a href="#">Главная</a>
-        </li>
-        <li class="breadcrumbs__item">
-          <a href="#">Внутренняя</a>
-        </li>
-        <li class="breadcrumbs__item">
-          <span>Корзина</span>
-        </li>
-      </ul>
-      <!-- end breadcrumbs -->
-      <li>Item1</li>
-      <li>Item2</li>
+      <!-- begin header -->
+      <div class="header">
+        <div class="header__inner">
+          <div class="header__logo">
+            <!-- begin logo -->
+            <a href="#" class="logo">
+              <h1 class="logo__text">White park capital</h1>
+              <img src="./img/logo.svg" alt="Logo">
+            </a>
+            <!-- end logo -->
+          </div>
+          <!-- begin nav -->
+          <nav class="header__nav nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="page.html" class="nav__link">Home</a>
+              </li>
+              <li class="nav__item">
+                <a href="team.html" class="nav__link is-active">Team</a>
+              </li>
+              <li class="nav__item">
+                <a href="medium.html" class="nav__link">Medium</a>
+              </li>
+              <li class="nav__item">
+                <a href="contacts.html" class="nav__link">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- end nav -->
+          <div class="header__login">
+            <a href="#" class="header__link">Login</a>
+            <a href="#" class="btn">Invest</a>
+          </div>
+        </div>
+      </div>
+      <!-- end header -->
+      <!-- begin hero -->
+      <div class="hero js-hero">
+        <div class="hero__back">
+          <img src="./img/hero-back.png" alt="img" class="hero__back-img">
+          <div class="hero__topseparator">
+            <div class="hero__top-line-left js-hero-top-line"></div>
+            <img class="js-topseparator-img" src="./img/logo-sm.svg" alt="img">
+            <div class="hero__top-line-right js-hero-top-line"></div>
+          </div>
+          <div class="hero__title hero__title_red js-hero-title" data-anim-text-parent><span data-anim="text-from-bottom">BLOCKCHAIN</span></div>
+        </div>
+        <div class="hero__front">
+          <img src="./img/hero-front.png" alt="img" class="hero__front-img">
+          <div class="hero__title js-hero-title" data-anim-text-parent><span data-anim="text-from-bottom">IMPACT</span></div>
+          <div class="hero__bottomseparator js-hero-bottomseparator"></div>
+        </div>
+        <a href="#about" class="btn-circle js-hero-btn">
+          <svg class="icon icon-arrow-down">
+            <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+          </svg>
+        </a>
+      </div>
+      <!-- end hero -->
+      <!-- begin about -->
+      <div class="about" id="about" style="background-image: url(./img/mountain.svg);">
+        <div class="about__inner inner" data-scroll-trigger="200" data-duration-anim=".7" data-delay-anim="0.3" data-anim-group>
+          <div data-anim="from-bottom">
+            <h2 class="about__title title color-red">ABOUT FUND</h2>
+            <p>WhitePark Capital is a hedge fund focused on digital assets and startups in the blockchain space. We believe that Blockchain is becoming a fundamental breakthrough in IT - similar to how personal computers, Internet, mobile phones and social media disrupted existing systems, created new markets and business models.</p>
+            <div class="about__footer"><a href="#" class="btn">Read our Thesis</a></div>
+          </div>
+        </div>
+      </div>
+      <!-- end about -->
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
