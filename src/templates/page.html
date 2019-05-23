@@ -5,46 +5,36 @@ title: Index page
 
 {% block content %}
 	
-	{# variable example #}
-	<h1>{{title}}</h1>
-
-	
-	{# partial example #}
-	{% include "partials/_header.html" %}
-
-	{# mixin example #}
-	{{mixins.icon('facebook')}}
-
-
-	{# checkbox exepmle #}
-	<p>{{ mixins.checkbox() }}</p>
-	<p>
-		{{ mixins.checkbox({
-			checked: true,
-			name: 'exemple-name',
-			text: 'checkbox-checked'
-		}) }}
-	</p>
-	{# radio exepmle #}
-	{{ mixins.checkbox({
-		name: 'exemple-name',
-		text: 'text',
-		radio: true
-	}) }}
-	
-
-	{# breadcrumbs exepmle #}
-	{{ mixins.breadcrumbs({
-		list: ['Главная','Внутренняя','Корзина']
-	}) }}
-
-
-	{# data usage example #}
-		{% import "data/data.html" as tests %}
-		
-		{% for test in tests.list %}
-		<li>{{test.title}}</li>
-		{% endfor %}
-	{# end of example #}
+	{{ header.block({active: 2}) }}
+	<!-- begin hero -->
+	<div class="hero js-hero">
+		<div class="hero__back">
+			<img src="./img/hero-back.png" alt="img" class="hero__back-img">
+			<div class="hero__topseparator">
+				<div class="hero__top-line-left js-hero-top-line"></div>
+				<img class="js-topseparator-img" src="./img/logo-sm.svg" alt="img">
+				<div class="hero__top-line-right js-hero-top-line"></div>
+			</div>
+			<div class="hero__title hero__title_red js-hero-title" data-anim-text-parent><span data-anim="text-from-bottom">BLOCKCHAIN</span></div>
+		</div>
+		<div class="hero__front">
+			<img src="./img/hero-front.png" alt="img" class="hero__front-img">
+			<div class="hero__title js-hero-title" data-anim-text-parent><span data-anim="text-from-bottom">IMPACT</span></div>
+			<div class="hero__bottomseparator js-hero-bottomseparator"></div>
+		</div>
+		<a href="#about" class="btn-circle js-hero-btn">{{ mixins.icon('arrow-down') }}</a>
+	</div>
+	<!-- end hero -->
+	<!-- begin about -->
+	<div class="about" id="about" style="background-image: url(./img/mountain.svg);">
+		<div class="about__inner inner" data-scroll-trigger="200" data-duration-anim=".7" data-delay-anim="0.3" data-anim-group>
+			<div data-anim="from-bottom">
+				<h2 class="about__title title color-red">ABOUT FUND</h2>
+				<p>WhitePark Capital is a hedge fund focused on digital assets and startups in the blockchain space. We believe that Blockchain is becoming a fundamental breakthrough in IT - similar to how personal computers, Internet, mobile phones and social media disrupted existing systems, created new markets and business models.</p>
+				<div class="about__footer"><a href="#" class="btn">Read our Thesis</a></div>
+			</div>
+		</div>
+	</div>
+	<!-- end about -->
 
 {% endblock %}

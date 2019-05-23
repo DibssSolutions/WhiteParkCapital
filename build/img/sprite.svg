@@ -1,4 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg"><symbol id="icon-facebook" viewBox="0 0 10 19">
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg"><symbol id="icon-arrow-down" viewBox="0 0 12 8">
+    <title>
+        Group
+    </title>
+    <g fill-rule="evenodd">
+        <path d="M0 1.42L1.4-.019l4.59 4.58-1.415 1.414z"/>
+        <path d="M4.575 5.976L10.587 0 12 1.436 5.99 7.39z"/>
+    </g>
+</symbol><symbol id="icon-facebook" viewBox="0 0 10 19">
     <title>
         facebook
     </title>

@@ -5,3 +5,43 @@
 	font-family: $name
 	font-style: $style
 	font-weight: $weight
+
+
+
+
+$harmoniaSansStd: 'Harmonia Sans Std'
+=hss
+	font-family: $harmoniaSansStd, 'Open Sans', sans-serif
+
+@font-face
+	+fontdefault(normal, 900, $harmoniaSansStd)
+	+fontpath('Harmonia Sans Std Black', 'HarmoniaSansStd-Black', HarmoniaSansStd-Black)
+@font-face
+	+fontdefault(italic, 900, $harmoniaSansStd)
+	+fontpath('Harmonia Sans Std Black Italic', 'HarmoniaSansStd-BlackItalic', HarmoniaSansStd-BlackItalic)
+
+@font-face
+	+fontdefault(normal, 700, $harmoniaSansStd)
+	+fontpath('Harmonia Sans Std Bold', 'HarmoniaSansStd-Black', HarmoniaSansStd-Bold)
+@font-face
+	+fontdefault(italic, 700, $harmoniaSansStd)
+	+fontpath('Harmonia Sans Std Bold Italic', 'HarmoniaSansStd-BoldItalic', HarmoniaSansStd-BoldItalic)
+
+@font-face
+	+fontdefault(normal, 400, $harmoniaSansStd)
+	+fontpath('Harmonia Sans Std', 'HarmoniaSansStd-Regular', HarmoniaSansStd-Regular)
+@font-face
+	+fontdefault(italic, 400, $harmoniaSansStd)
+	+fontpath('Harmonia Sans Std Italic', 'HarmoniaSansStd-Italic', HarmoniaSansStd-Italic)
+
+
+
+$roboto: 'Roboto', Arial, sans-serif
+=rob
+	font-family: $roboto, Arial, sans-serif
+@font-face
+	+fontdefault(normal, 400, $roboto)
+	+fontpath('Roboto', 'Roboto-Regular', Roboto-Regular)
+@font-face
+	+fontdefault(italic, 400, $roboto)
+	+fontpath('Roboto Italic', 'Roboto-Italic', Roboto-Italic)
