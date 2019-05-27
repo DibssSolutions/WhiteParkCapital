@@ -1,0 +1,60 @@
+<!-- begin footer -->
+<div class="footer">
+	<div class="footer__inner inner">
+		<div class="footer__row row">
+			<div class="footer__col-left col">
+				<div class="footer__top-wrap">
+					<a href="/" class="footer__logo"><img src="./img/logo-sm-red.svg" alt="Logo"></a>
+					<h3 class="footer__title-mid title-md">WhitePark Capital Blockchain Impact</h3>
+				</div>
+				<div class="footer__bottom-wrap sm-hide">
+					<ul class="soc">
+						{% for icon in ['twitter','medium','facebook'] %}
+						<li><a href="#">{{ mixins.icon(icon) }}</a></li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+			<div class="footer__col-right col">
+				<div class="footer__top-wrap">
+					<h4 class="footer__title title color-red">GET IN TOUCH</h4>
+					<div class="footer__link"><a href="tel:+34655171020">+34 655 171 020</a></div>
+					<div class="footer__link"><a href="mailto:whiteparkcapital@gmail.com">whiteparkcapital@gmail.com</a></div>
+					<h4 class="footer__title title color-red">EXPLORE</h4>
+					<ul class="footer__nav">
+						{% for item in [
+							{
+								title: 'Home',
+								href: 'page.html'
+							},{
+								title: 'Team',
+								href: 'team.html'
+							},{
+								title: 'Medium',
+								href: 'medium.html'
+							},{
+								title: 'Contacts',
+								href: 'contacts.html'
+							}
+						] %}
+						<li><a href="{{ item.href }}">{{ item.title }}</a></li>
+						{% endfor %}
+					</ul>
+					<div class="footer__text">1177 Avenue of the Americas, New York 10036</div>
+					<div class="footer__soc sm-show">
+						<ul class="soc">
+							{% for icon in ['twitter','medium','facebook'] %}
+							<li><a href="#">{{ mixins.icon(icon) }}</a></li>
+							{% endfor %}
+						</ul>
+					</div>
+					<div class="footer__dev">
+						<div class="footer__text">Design by</div>
+						<a href="https://anthonyslab.com/ru/studio" target="_blank">Anthony’s Lab</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end footer -->

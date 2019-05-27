@@ -5,11 +5,11 @@ title: Index page
 
 {% block content %}
 	
-	{{ header.block({active: 2}) }}
+	{{ header.block({active: 2, absolute: true}) }}
 	<!-- begin hero -->
 	<div class="hero js-hero">
 		<div class="hero__back">
-			<img src="./img/hero-back.png" alt="img" class="hero__back-img">
+			<img src="./img/hero-back-2x.png" alt="img" class="hero__back-img">
 			<div class="hero__topseparator">
 				<div class="hero__top-line-left js-hero-top-line"></div>
 				<img class="js-topseparator-img" src="./img/logo-sm.svg" alt="img">
@@ -18,7 +18,7 @@ title: Index page
 			<div class="hero__title hero__title_red js-hero-title" data-anim-text-parent><span data-anim="text-from-bottom">BLOCKCHAIN</span></div>
 		</div>
 		<div class="hero__front">
-			<img src="./img/hero-front.png" alt="img" class="hero__front-img">
+			<img src="./img/hero-front-2x.png" alt="img" class="hero__front-img">
 			<div class="hero__title js-hero-title" data-anim-text-parent><span data-anim="text-from-bottom">IMPACT</span></div>
 			<div class="hero__bottomseparator js-hero-bottomseparator"></div>
 		</div>
@@ -27,7 +27,7 @@ title: Index page
 	<!-- end hero -->
 	<!-- begin about -->
 	<div class="about" id="about" style="background-image: url(./img/mountain.svg);">
-		<div class="about__inner inner" data-scroll-trigger="200" data-duration-anim=".7" data-delay-anim="0.3" data-anim-group>
+		<div class="about__inner inner" data-scroll-trigger="50" data-duration-anim=".7" data-delay-anim="0.3" data-anim-group>
 			<div data-anim="from-bottom">
 				<h2 class="about__title title color-red">ABOUT FUND</h2>
 				<p>WhitePark Capital is a hedge fund focused on digital assets and startups in the blockchain space. We believe that Blockchain is becoming a fundamental breakthrough in IT - similar to how personal computers, Internet, mobile phones and social media disrupted existing systems, created new markets and business models.</p>
@@ -36,5 +36,295 @@ title: Index page
 		</div>
 	</div>
 	<!-- end about -->
-
+	<!-- begin section -->
+	<div class="section">
+		<div class="section__inner inner" data-scroll-trigger="50" data-duration-anim=".7" data-delay-anim="0.3" data-anim-group>
+			<div class="section__row row">
+				<div class="section__col section__col_img col col-6 col-md-12">
+					<div class="section__img">
+						<img src="./img/illustration.svg" alt="img">
+					</div>
+				</div>
+				<div class="section__col col col-6 col-md-12">
+					<div class="section__content" data-anim="from-bottom">
+						<h2 class="section__title title color-red">WHO WE ARE?</h2>
+						<h3 class="section__title-lg title-lg">WhitePark is a bridge connecting investors to new markets for long-term value creation.</h3>
+						<h4 class="section__title-md title-md">Our team has been active in the cryptocurrency industry since 2013.</h4>
+						<div class="section__text">
+							<p>And has years of experience in fintech, financial markets, data analysis, software development, and business management. We are driven by three critical forces: entrepreneurship, passion for technology, and quantitative analysis.</p>
+						</div>
+						<div class="section__readmore">
+							<a href="#" class="readmore">Read more</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end section -->
+	<!-- begin section -->
+	<div class="section section_principles">
+		<div class="section__inner inner" data-scroll-trigger="50" data-duration-anim=".7" data-delay-anim="0.3" data-anim-group>
+			<div class="section__row row" data-anim="from-bottom">
+				<div class="section__col col col-6 col-md-12">
+					<div class="section__content">
+						<h2 class="section__title title color-red">MAIN PRINCIPLES</h2>
+						<h3 class="section__title-lg title-lg">Adding value to <br>entrepreneurs and clients</h3>
+					</div>
+				</div>
+				<div class="section__col col col-6 col-md-12">
+					<h4 class="section__title-md title-md">Blockchain technology and cryptocurrency networks are decentralizing the current online user network/private data layer of the internet, collapsing production costs, eliminating data monopolies, and catalyzing the next wave of innovation. </h4>
+					<div class="section__text">
+						<p> Therefore, we are investing in decentralized blockchain protocols with a cryptocurrency native to the protocol.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end section -->
+	<!-- begin tabs -->
+	<div class="tabs" data-tabs data-scroll-trigger="50" data-duration-anim=".7" data-delay-anim="0.3" data-anim-group>
+		<div data-anim="from-bottom"
+		>
+			<div class="tabs__top">
+				<div class="tabs__inner inner">
+					<div class="tabs__line">
+						<img class="sm-hide" src="./img/tabs-lines.svg" alt="tabs-lines">
+						<img class="sm-show" src="./img/tabs-line-sm.svg" alt="tabs-line-sm">
+					</div>
+					<ul class="tabs__list md-hide">
+						<li class="tabs__item is-active" data-tabs-control="investing"><span>Long term Investing</span></li>
+						<li class="tabs__item" data-tabs-control="tools"><span>Risk management tools</span></li>
+						<li class="tabs__item" data-tabs-control="custodianship"><span>Custodianship</span></li>
+						<li class="tabs__item" data-tabs-control="electronic"><span>Electronic Signatures <br>Made Easy</span></li>
+						<li class="tabs__item" data-tabs-control="investement"><span>Investement Vehicles</span></li>
+					</ul>
+				</div>
+			</div>
+			<div class="tabs__wrap js-tabs-slider" data-tabs-wrapper>
+				<div class="tabs__container is-open" data-tabs-container="investing">
+					<div class="tabs__theme">
+						<div class="tabs__theme-inner">
+							<span>Long term Investing</span>
+						</div>
+					</div>
+					<!-- begin section -->
+					<div class="section">
+						<div class="section__inner inner">
+							<div class="section__row row">
+								<div class="section__col col col-6 col-md-12">
+									<div class="section__content-md">
+										<h3 class="section__title-mid title-mid">Long term Investing</h3>
+										<h4 class="section__title-md title-md">WhitePark Capital is interested in long term value creation; we invest in companies that have a sound cryptoeconomic model that supports long-term time horizons.</h4>
+										<div class="section__text-md">
+											<p>In particular, we are looking to invest in blockchain protocols whose long-term value is derived from the user demand and transaction volume on the network. We believe that blockchain technology gives entrepreneurs and programmers the freedom to launch new ventures without having to rely on traditional models of financing. As a result, our fund is deeply engaged in the advancement of business, technological, and social impact objectives.</p>
+										</div>
+									</div>
+								</div>
+								<div class="section__col section__col_img col col-6 col-md-12">
+									<div class="section__img">
+										<img src="./img/tabs-illustration.svg" alt="img">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end section -->
+				</div>
+				<div class="tabs__container" data-tabs-container="tools">
+					<div class="tabs__theme">
+						<div class="tabs__theme-inner">
+							<span>Risk management tools</span>
+						</div>
+					</div>
+					<!-- begin section -->
+					<div class="section">
+						<div class="section__inner inner">
+							<div class="section__row row">
+								<div class="section__col col col-6 col-md-12">
+									<div class="section__content-md">
+										<h3 class="section__title-mid title-mid">Risk Management Tools</h3>
+										<h4 class="section__title-md title-md">Having the ability to mitigate your exposure to risk is crucial.</h4>
+										<div class="section__text-md">
+											<p>This is why we offer our investors a variety of investment vehicles that can be used to diminish the amount of risk they are exposed to. From cryptocurrency futures to digital asset options, we give investors the ability to hedge their investments through the derivatives market.</p>
+										</div>
+									</div>
+								</div>
+								<div class="section__col section__col_img col col-6 col-md-12">
+									<div class="section__img">
+										<img src="./img/tabs-illustration.svg" alt="img">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end section -->
+				</div>
+				<div class="tabs__container" data-tabs-container="custodianship">
+					<div class="tabs__theme">
+						<div class="tabs__theme-inner">
+							<span>Custodianship</span>
+						</div>
+					</div>
+					<!-- begin section -->
+					<div class="section">
+						<div class="section__inner inner">
+							<div class="section__row row">
+								<div class="section__col col col-6 col-md-12">
+									<div class="section__content-md">
+										<h3 class="section__title-mid title-mid">Custodianship</h3>
+										<h4 class="section__title-md title-md">WhitePark capital uses licensed, qualified custodians to store our clients’ digital assets in a regulated, secure, and compliant manner.</h4>
+										<div class="section__text-md">
+											<p>100% of digital assets are custodied and secured offline on a cold storage. All fiat and crypto customer assets are insured and backed by mandatory capital reserves and banking compliance standards. We have a firm belief that using a regulated, trusted, qualified custodian is the best option for storing cryptocurrency holdings of any size.</p>
+										</div>
+									</div>
+								</div>
+								<div class="section__col section__col_img col col-6 col-md-12">
+									<div class="section__img">
+										<img src="./img/tabs-illustration.svg" alt="img">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end section -->
+				</div>
+				<div class="tabs__container" data-tabs-container="electronic">
+					<div class="tabs__theme">
+						<div class="tabs__theme-inner">
+							<span>Electronic Signatures Made Easy</span>
+						</div>
+					</div>
+					<!-- begin section -->
+					<div class="section">
+						<div class="section__inner inner">
+							<div class="section__row row">
+								<div class="section__col col col-6 col-md-12">
+									<div class="section__content-md">
+										<h3 class="section__title-mid title-mid">Electronic Signatures Made Easy</h3>
+										<h4 class="section__title-md title-md">As one of the first truly digital fund managers, we serve forward-looking investors with the help of innovative onboarding and reporting processes that are 100% digitized.</h4>
+										<div class="section__text-md">
+											<p>We are also amongst the first funds to accept contributions in both fiat currency (US dollar and Euro) and cryptocurrency (Bitcoin). Our legal infrastructure can support accredited investors, corporations, and institutional investors. Through our electronic signature service, we were able to boil down the document signing process from four steps to just two! Instead of (1) printing out a document, (2) signing the document, (3) scanning the document, and then finally send it back (4), through our electronic signature service, signing documents is as easy as (1) filling information online and then hitting submit button (2)!</p>
+										</div>
+									</div>
+								</div>
+								<div class="section__col section__col_img col col-6 col-md-12">
+									<div class="section__img">
+										<img src="./img/tabs-illustration.svg" alt="img">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end section -->
+				</div>
+				<div class="tabs__container" data-tabs-container="investement">
+					<div class="tabs__theme">
+						<div class="tabs__theme-inner">
+							<span>Investement Vehicles</span>
+						</div>
+					</div>
+					<!-- begin section -->
+					<div class="section">
+						<div class="section__inner inner">
+							<div class="section__row row">
+								<div class="section__col col col-6 col-md-12">
+									<div class="section__content-md">
+										<h3 class="section__title-mid title-mid">Investment Vehicles</h3>
+										<h4 class="section__title-md title-md">WhitePark Capital provides accredited investors with a variety of investment vehicles.</h4>
+										<div class="section__text-md">
+											<p>This includes crypto-index solution for those who prefer highly liquid, smart and secure way to get diversified exposure to overall cryptoasset market, as well as long term value creation and accumulation fund for investors with low-time preferences.</p>
+										</div>
+									</div>
+								</div>
+								<div class="section__col section__col_img col col-6 col-md-12">
+									<div class="section__img">
+										<img src="./img/tabs-illustration.svg" alt="img">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end section -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end tabs -->
+	<!-- begin section -->
+	<div class="section">
+		<div class="section__inner inner" data-scroll-trigger="50" data-duration-anim=".7" data-delay-anim="0.3" data-anim-group>
+			<div class="section__row row">
+				<div class="section__col col col-6 col-md-12">
+					<div class="section__content" data-anim="from-bottom">
+						<h2 class="section__title title color-red">WHAT WE DO?</h2>
+						<h3 class="section__title-lg title-lg">Research, Invest, <br>Add Value, Support </h3>
+						<h4 class="section__title-md title-md">At WhitePark Capital, we invest in blockchain and cryptocurrency projects in which we can create value through our network and expertise</h4>
+						<div class="section__text">
+							<p>As well as help build and scale the coin, project, or token in areas like governance, cryptoeconomic design, community management, strategy, and organizational development.</p>
+						</div>
+						<div class="section__readmore">
+							<a href="#" class="readmore">Read more</a>
+						</div>
+					</div>
+				</div>
+				<div class="section__col section__col_img col col-6 col-md-12">
+					<div class="section__img">
+						<img src="./img/illustration-2.svg" alt="img">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end section -->
+	<!-- begin section -->
+	<div class="section section_partners text-center">
+		<div class="section__inner inner" data-scroll-trigger="50" data-duration-anim=".7" data-delay-anim="0.3" data-anim-group>
+			<div class="section__content section__content_center" data-anim="from-bottom">
+				<h2 class="section__title title color-red">OUR PARTNERS</h2>
+				<h3 class="section__title-lg title-lg">All of the fund’s investment decisions are based on in-depth research and analysis.</h3>
+			</div>
+			<!-- begin slider -->
+			<div class="section__slider slider js-slider">
+				{% for item in [
+					{
+						logo: 'jp-morgan',
+						text: 'Investement fund'
+					},
+					{
+						logo: 'morgan-stanley',
+						text: 'Investement fund'
+					},
+					{
+						logo: 'credit-suisse',
+						classImg: 'vertical-top',
+						text: 'Investement fund'
+					},
+					{
+						logo: 'morgan-stanley',
+						text: 'Investement fund'
+					},
+					{
+						logo: 'credit-suisse',
+						classImg: 'vertical-top',
+						text: 'Investement fund'
+					}
+				] %}
+				<div class="slider__slide">
+					<!-- begin partner -->
+					<div class="partner">
+						<div class="partner__logo">
+							<img src="./img/{{ item.logo }}.svg"{% if item.classImg %} class="{{ item.classImg }}"{% endif %} alt="partner-logo">
+						</div>
+						<div class="partner__text">{{ item.text }}</div>
+					</div>
+					<!-- end partner -->
+				</div>
+				{% endfor %}
+			</div>
+			<!-- end slider -->
+		</div>
+	</div>
+	<!-- end section -->
+	{% include "./partials/_footer.html" %}
 {% endblock %}

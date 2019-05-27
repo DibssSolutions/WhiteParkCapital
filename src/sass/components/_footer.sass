@@ -1,0 +1,93 @@
+.footer
+	padding: 93px 0 97px
+	background-image: url(../img/footer-bg.svg)
+	background-position: 68% 214px
+	background-repeat: no-repeat
+	+sm
+		padding: 72px 0
+		text-align: center
+		background: none
+	a
+		color: $black
+		transition: opacity .3s
+		+hover
+			opacity: .6
+	&__col-left,
+	&__col-right
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+	&__col-left
+		+fs(57.7%)
+		+sm
+			+fs(100%)
+	&__col-right
+		+fs(42.3%)
+		+sm
+			margin-top: 40px
+			+fs(100%)
+	&__logo
+		margin-top: 3px
+		margin-bottom: 28px
+		vertical-align: top
+		display: inline-block
+		img
+			max-width: 100%
+			display: block
+	&__title-mid
+		max-width: 182px
+		+sm
+			margin: 0 auto
+	&__title
+		&:not(:first-child)
+			margin-top: 39px
+			+sm
+				margin-top: 25px
+		&:not(:last-child)
+			margin-bottom: 18px
+			+sm
+				margin-bottom: 11px
+	&__link
+		a
+			opacity: 0.6
+			+hover
+				opacity: 1
+	&__nav
+		margin-bottom: -5px
+		flex-wrap: wrap
+		line-height: 2
+		display: flex
+		+sm
+			margin-bottom: 7px
+			justify-content: center
+		li
+			margin-bottom: 5px
+			&:not(:last-child)
+				margin-right: 19px
+	&__text
+		opacity: 0.3
+	&__dev
+		margin-top: 33px
+		+sm
+			margin-top: 15px
+		.footer__text
+			display: inline
+	&__soc
+		margin-top: 42px
+.soc
+	margin-bottom: -5px
+	flex-wrap: wrap
+	line-height: 2
+	display: flex
+	+sm
+		justify-content: center
+	li
+		margin-bottom: 5px
+		&:not(:last-child)
+			margin-right: 40px
+	a
+		font-size: 18px
+		color: $black
+		transition: opacity .3s
+		+hover
+			opacity: .6

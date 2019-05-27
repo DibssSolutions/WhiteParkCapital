@@ -22,7 +22,15 @@
 // CUSTOM PADDING ON BREAKPOINTS - NOT INCLUDED IN MIXIN
 +generate_grid()
 
+.out
+	position: relative
+	overflow: hidden
+
 .inner
 	margin: 0 auto
 	padding: 0 30px
-	max-width: 1280px
+	max-width: 1305px
+	+md
+		padding: 0 40px
+		+xs
+			padding: 0 20px

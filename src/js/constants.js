@@ -12,6 +12,7 @@ export const widthMD = 1024;
 export const widthSM = 768;
 
 export const BODY = $('body');
+export const HTML = $('html');
 export const WIN = $(window);
 export const DOC = $(document);
 export const HTMLBODY = $('html, body');

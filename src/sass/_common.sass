@@ -1,20 +1,73 @@
+html
+	&.is-open-menu
+		overflow-y: scroll
+
 body
 	+rob
 	+f(16px,400,2.375)
-	color: rgba($black,.6)
+	color: $black
+	min-width: 320px
 	+font-smoothing
 	opacity: 0
 	visibility: hidden
-	transition: opacity .25s ease-in-out, visibility .25s ease-in-out
+	transition: opacity .35s ease-in-out, visibility .35s ease-in-out
+	+md
+		+f(14px,400,2.43)
 	&.is-loaded
 		opacity: 1
 		visibility: visible
+	.is-open-menu &
+		position: fixed
+		height: 100vh
+		width: 100%
+		overflow: hidden
 
-
-.color-red
-	color: $red
-
+// TItLES
 .title
 	+hss
 	+f(14px,700,1.57)
 	text-transform: uppercase
+.title-lg
+	+hss
+	+f(36px,400,1.56)
+	+sm
+		+f(24px,400,1.8)
+		letter-spacing: 0.005em
+.title-mid
+	+hss
+	+f(28px,400,1.64)
+	+sm
+		+f(24px,400,2.23)
+.title-md
+	+hss
+	+f(22px,400,2)
+	+sm
+		+f(18px,400,2.23)
+
+.readmore
+	position: relative
+	padding-left: 90px
+	color: $red
+	+f(16px,400,2.375)
+	transition: color .3s
+	vertical-align: top
+	display: inline-block
+	+hover
+		color: darken($red, 10%)
+		&:before
+			transform: scaleX(0.5)
+	+sm
+		padding-left: 0
+		+f(14px, 400, 1.84)
+	&:before
+		position: absolute
+		content: ''
+		top: 50%
+		left: 0
+		width: 70px
+		height: 1px
+		transform-origin: right
+		transition: transform .3s
+		background-color: $red
+		+sm
+			display: none

@@ -5,7 +5,20 @@
 	text-align: center
 	background-repeat: no-repeat
 	background-position: center 116px
+	+md
+		padding: 190px 0 100px
+		font-size: 22px
+	+sm
+		padding: 86px 0 66px
+		+f(18px,400,2.23)
+		letter-spacing: -0.004em
+	&__inner
+		max-width: 1145px
 	&__title
 		margin-bottom: 35px
+		+sm
+			margin-bottom: 18px
 	&__footer
 		margin-top: 40px
+		+sm
+			margin-top: 23px

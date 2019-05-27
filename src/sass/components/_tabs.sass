@@ -1,0 +1,257 @@
+[data-tabs]
+	overflow: hidden
+	[data-tabs-control]
+		cursor: pointer
+
+		&[disabled],
+		&.is-disabled
+			cursor: not-allowed
+			+nosel
+	[data-tabs-wrapper]
+		position: relative
+	[data-tabs-container]
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		opacity: 0
+		visibility: hidden
+		transition: opacity 0.3s, visibility 0.3s
+		&.is-open
+			position: relative
+			opacity: 1
+			visibility: visible
+	.slick-slide
+		[data-tabs-container]
+			position: relative
+			visibility: visible
+			opacity: 1
+
+.tabs
+	padding-top: 7px
+	.section
+		position: relative
+		z-index: 1
+		padding: 91px 0 40px
+		+md
+			padding: 60px 0 20px
+		&__img
+			margin-top: 25px
+			margin-right: -76px
+			+sm
+				margin: 0 -30px -34px
+			img
+				margin: 0 0 0 auto
+				+md
+					margin: 0 auto
+		&__col_img
+			+md
+				margin-bottom: 10px
+			+sm
+				margin-bottom: 0
+	.slick-dots
+		position: absolute
+		top: -46px
+		left: 0
+		width: 100%
+		font-size: 0
+		padding: 0 30px
+		text-align: center
+		justify-content: space-around
+		display: flex
+		+sm
+			padding: 0
+			display: block
+		li
+			vertical-align: top
+			display: inline-block
+			&:not(:first-child)
+				margin-left: 34px
+			&:first-child button
+				border-color: #D65151
+				color: #D65151
+			&:nth-child(2) button
+				border-color: #AB6DA5
+				color: #AB6DA5
+			&:nth-child(3) button
+				border-color: #826CE7
+				color: #826CE7
+			&:nth-child(4) button
+				border-color: #7D89E9
+				color: #7D89E9
+			&:nth-child(5) button
+				border-color: #78A7EB
+				color: #78A7EB
+			&.slick-active
+				button
+					&:after
+						transform: scale(1)
+		button
+			position: relative
+			+circle(16)
+			font-size: 0
+			border: 2px solid #D65151
+			color: #D65151
+			background-color: $white
+			&:after
+				position: absolute
+				content: ''
+				top: 50%
+				left: 50%
+				margin: -3px 0 0 -3px
+				+circle(6)
+				transform: scale(0)
+				transition: transform .3s
+				background-color: currentColor
+	&__theme
+		position: relative
+		z-index: 1
+		text-align: center
+		background-color: $white
+		display: none
+		+md
+			display: block
+	&__theme-inner
+		padding: 11px 38px 10px
+		margin: 0 30px
+		min-height: 70px
+		+hss
+		+f(16px,400,48px)
+		vertical-align: top
+		border-radius: 15px 15px 0 0
+		display: inline-block
+		span
+			line-height: 1.5
+			vertical-align: middle
+			display: inline-block
+		[data-tabs-container="investing"] &
+			color: #D65151
+			background-color: rgba(#D65151, .07)
+		[data-tabs-container="tools"] &
+			color: #AB6DA5
+			background-color: rgba(#AB6DA5, .07)
+		[data-tabs-container="custodianship"] &
+			color: #826CE7
+			background-color: rgba(#826CE7, .07)
+		[data-tabs-container="electronic"] &
+			color: #7D89E9
+			background-color: rgba(#7D89E9, .07)
+		[data-tabs-container="investement"] &
+			color: #78A7EB
+			background-color: rgba(#78A7EB, .07)
+	&__line
+		margin: 0 -193px 38px
+		+md
+			margin: 0 -30px 37px
+		img
+			margin: 0 auto
+			max-width: 100%
+			min-width: 100%
+			display: block
+			+md
+				height: 2px
+	&__list
+		padding: 0 31px
+		justify-content: space-around
+		display: flex
+	&__item
+		position: relative
+		padding: 7px 37px 13px
+		+hss
+		+f(16px,400,48px)
+		letter-spacing: .02em
+		text-align: center
+		user-select: none
+		transition: color .3s, background-color .3s, opacity .3s
+		border-radius: 15px 15px 0 0
+		&:before
+			position: absolute
+			content: ''
+			top: -46px
+			left: 50%
+			margin-left: -8px
+			+circle(16)
+			border: 2px solid
+			background-color: $white
+		&:after
+			position: absolute
+			content: ''
+			top: -41px
+			left: 50%
+			margin-left: -3px
+			+circle(6)
+			transform: scale(0)
+			transition: transform .3s
+			background-color: currentColor
+		&:not(.is-active)
+			+hover
+				span
+					opacity: .7
+		&[data-tabs-control="investing"]
+			&:before,
+			&:after
+				color: #D65151
+		&[data-tabs-control="tools"]
+			&:before,
+			&:after
+				color: #AB6DA5
+		&[data-tabs-control="custodianship"]
+			&:before,
+			&:after
+				color: #826CE7
+		&[data-tabs-control="electronic"]
+			&:before,
+			&:after
+				color: #7D89E9
+		&[data-tabs-control="investement"]
+			&:before,
+			&:after
+				color: #78A7EB
+		&.is-active
+			color: $red
+			background-color: rgba(#D65151, .07)
+			&:after
+				transform: scale(1)
+			&[data-tabs-control="tools"]
+				color: #AB6DA5
+				background-color: rgba(#AB6DA5, .07)
+			&[data-tabs-control="custodianship"]
+				color: #826CE7
+				background-color: rgba(#826CE7, .07)
+			&[data-tabs-control="electronic"]
+				color: #7D89E9
+				background-color: rgba(#7D89E9, .07)
+			&[data-tabs-control="investement"]
+				color: #78A7EB
+				background-color: rgba(#78A7EB, .07)
+		span
+			line-height: 1.5
+			transition: opacity .3s
+			vertical-align: middle
+			display: inline-block
+	&__wrap
+	&__container
+		position: relative
+		&:before
+			position: absolute
+			content: ''
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			opacity: 0.07
+			pointer-events: none
+			background-image: linear-gradient(180deg, #D65151 0%, #F9F9F9 100%)
+		&[data-tabs-container="tools"]
+			&:before
+				background-image: linear-gradient(180deg, #AB6DA5 0%, #F9F9F9 100%)
+		&[data-tabs-container="custodianship"]
+			&:before
+				background-image: linear-gradient(180deg, #826CE7 0%, #F9F9F9 100%)
+		&[data-tabs-container="electronic"]
+			&:before
+				background-image: linear-gradient(180deg, #7D89E9 0%, #F9F9F9 100%)
+		&[data-tabs-container="investement"]
+			&:before
+				background-image: linear-gradient(180deg, #78A7EB 0%, #F9F9F9 100%)

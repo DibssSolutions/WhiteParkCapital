@@ -15,11 +15,11 @@ tlItems
   .to(topSeparatorImg, 0.6, { 
     opacity: 1, 
     ease: Power2.easeInOut
-  }, 0.2)
+  }, 0.35)
   .to(topLines, 0.5, { 
     css: { scale: 1 }, 
     ease: Quad.easeInOut 
-  }, 0.5)
+  }, 0.6)
   .staggerTo(titlesText, 1, {
     y: 0,
     opacity: 1,

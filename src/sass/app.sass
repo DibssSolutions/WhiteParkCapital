@@ -4,7 +4,7 @@
 // @import bootstrap-select
 // @import lib/bootstrap-rating
 // @import lib/bootstrap-glyphicons.min
-// @import lib/slick
+@import lib/slick
 // @import lib/noui-slider
 @import helpers/all
 @import generated/sprite-svg
@@ -12,3 +12,27 @@
 @import layouts
 @import main
 @import components/index
+
+
+.text-center
+	text-align: center
+
+.color-red
+	color: $red
+
+.md-show
+	display: none
+	+md
+		display: block
+.md-hide
+	+md
+		display: none !important
+
+.sm-show
+	display: none !important
+	+sm
+		display: block !important
+.sm-hide
+	+sm
+		display: none !important
+

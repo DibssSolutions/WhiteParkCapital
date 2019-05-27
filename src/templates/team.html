@@ -1,0 +1,55 @@
+---
+title: Team page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	{{ header.block({active: 2}) }}
+	<!-- begin team -->
+	<div class="team">
+		<div class="team__head text-center">
+			<h2 class="team__title title">WHITE PARK CAPITAL TEAM</h2>
+			<h3 class="team__title-lg title-lg">The team at White Park Capital is driven by three critical forces: entrepreneurship, passion for technology, and quantitative analysis.</h3>
+		</div>
+		<div class="team__list">
+			<!-- begin collaborator -->
+			<div class="collaborator">
+				<div class="collaborator__img">
+					<img src="./img/" alt="img">
+				</div>
+				<div class="collaborator__wrap">
+					<div class="collaborator__head">
+						<h3 class="collaborator__title-lg title-lg">Andrei Ponomarev</h3>
+						<ul class="collaborator__soc soc">
+							{% for icon in ['twitter','facebook'] %}
+							<li><a href="#">{{ mixins.icon(icon) }}</a></li>
+							{% endfor %}
+						</ul>
+					</div>
+					<p>Co-founder and managing partner of WhitePark Capital</p>
+					<h4 class="collaborator__title-md title-md">Andrei is an entrepreneur and an early-stage investor since 2011</h4>
+					<p>With a passion for technology, Andrei first entered the blockchain space in 2013, and ever since, he and his team have launched several successful startups related to p2p gaming platforms and digital assets. In the past three years, Andrei has also successfully managed a portfolio of private investors with a total value of over $120 million. Before co-founding WhitePark Capital, Andrei worked on startups’ strategic planning and developed integrated loyalty systems for corporate client acquisition and retention.</p>
+				</div>
+			</div>
+			<!-- end collaborator -->
+			<!-- begin collaborator -->
+			<div class="collaborator">
+				<div class="collaborator__wrap">
+					<div class="collaborator__head">
+						<h3 class="collaborator__title-lg title-lg"></h3>
+					</div>
+					<p></p>
+					<h4 class="collaborator__title-md title-md"></h4>
+					<p></p>
+				</div>
+				<div class="collaborator__img">
+					<img src="./img/" alt="img">
+				</div>
+			</div>
+			<!-- end collaborator -->
+		</div>
+	</div>
+	<!-- end team -->
+	{% include "./partials/_footer.html" %}
+{% endblock %}
