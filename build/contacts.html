@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Content page</title>
+    <title>Contacts page</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -60,13 +60,13 @@
                 <a href="page.html" class="nav__link">Home</a>
               </li>
               <li class="nav__item">
-                <a href="team.html" class="nav__link is-active">Team</a>
+                <a href="team.html" class="nav__link">Team</a>
               </li>
               <li class="nav__item">
                 <a href="medium.html" class="nav__link">Medium</a>
               </li>
               <li class="nav__item">
-                <a href="contacts.html" class="nav__link">Contacts</a>
+                <a href="contacts.html" class="nav__link is-active">Contacts</a>
               </li>
               <li class="nav__item md-show">
                 <a href="#" class="nav__link">Login</a>
@@ -89,72 +89,61 @@
         </div>
       </div>
       <!-- end header -->
-      <div class="inner" data-tabs data-scroll-trigger="50" data-duration-anim=".7" data-delay-anim="0.3" data-anim-group>
-        <!-- begin head -->
-        <div class="head text-center" data-anim="from-bottom">
-          <h2 class="head__title title color-red">CONTENT PAGE</h2>
-          <h3 class="head__title-lg title-lg">Who We Are</h3>
+      <!-- begin contacts -->
+      <div class="contacts" data-tabs data-scroll-trigger="50" data-duration-anim=".7" data-delay-anim="0.3" data-anim-group>
+        <div class="contacts__head" data-anim="from-bottom">
+          <div class="contacts__inner inner">
+            <h2 class="contacts__title title color-red text-center">CONTACTS</h2>
+            <h3 class="contacts__title-lg title-lg text-center">Fill out our form below or send</h3>
+          </div>
         </div>
-        <!-- end head -->
-        <!-- begin tabs -->
-        <div class="abouttabs">
-          <div class="abouttabs__row row" data-anim="from-bottom">
-            <div class="abouttabs__left col col-3 col-sm-12">
-              <div class="abouttabs__inner">
-                <ul class="abouttabs__list">
-                  <li class="abouttabs__item is-active" data-tabs-control="who"><span>WHO WE ARE?</span></li>
-                  <li class="abouttabs__item" data-tabs-control="what"><span>WHAT WE DO?</span></li>
-                  <li class="abouttabs__item" data-tabs-control="thesis"><span>THESIS</span></li>
-                </ul>
-              </div>
+        <div class="contacts__map" data-anim="from-bottom" style="background-image: url(./img/contacts-background.svg);">
+          <div class="contacts__inner inner">
+            <div class="map js-map" data-center-lat="50.45466" data-center-lng="30.5238"></div>
+          </div>
+        </div>
+        <div class="contacts__inner inner" data-anim="from-bottom">
+          <div class="contacts__row row">
+            <div class="contacts__col col col-6 col-md-12">
+              <h3 class="contacts__title-md title-mid">Fill out our form below or send us an email.</h3>
+              <h4 class="contacts__title title color-red">ADDRESS</h4>
+              <p>1177 Avenue of the Americas, New York 10036</p>
+              <h4 class="contacts__title title color-red">GET IN TOUCH</h4>
+              <p>+34 655 171 020</p>
+              <p>whiteparkcapital@gmail.com</p>
             </div>
-            <div class="abouttabs__wrap col col-9 col-sm-12">
-              <div data-tabs-wrapper>
-                <div class="abouttabs__container is-open" data-tabs-container="who">
-                  <h3 class="title-md">WhitePark Capital is a hedge fund focused on digital assets and startups in the blockchain space. We believe that Blockchain is becoming a fundamental breakthrough in IT - similar to how personal computers, Internet, mobile phones and social media disrupted existing systems, created new markets and business models.</h3>
-                  <p>Following the accelerated rise of altcoins, crypto markets are filled with considerable inefficiencies, and WhitePark Capital aims to separate the value from the noise. We methodically analyze blockchain assets in order to identify those with intrinsic value that has not yet been fully recognized by the market. Our investment universe consists of liquid blockchain assets that are traded on the market as well as early-stage vehicles like ICOs and blockchain venture capital projects.</p>
-                  <p>Our team that has been active in the cryptocurrency industry since 2013, and has years of experience in fintech, financial markets, data analysis, software development, and business management.</p>
-                  <p>The team at White Park Capital is driven by three critical forces: entrepreneurship, technology, and quantitative analysis. Members of our team were pioneers in the early days of the initial coin offering. This entrepreneurial spirit is enhanced by a firm grounding in technical knowledge, delivered by our talented team of programmers. The final piece of the puzzle is the data-driven approach that our quantitative analysis brings to the table. Our team’s experiences at blue-chip financial firms enable us to construct the unique, proprietary models that underpin our investment strategy.</p>
+            <div class="contacts__col col col-6 col-md-12">
+              <form class="form js-form">
+                <div class="form-control">
+                  <input type="text" placeholder="Your name" data-validation="required" data-validation-error-msg="This field is required" id="name">
                 </div>
-                <div class="abouttabs__container" data-tabs-container="what">
-                  <h3 class="title-md">At WhitePark Capital, we invest in decentralized blockchain protocols that have a token native to the protocol, that increase in value as demand for the protocol and the applications built on the protocol increases.</h3>
-                  <p>We are genuinely interested in building relationships with teams, so we are particularly interested in investing in companies where we can be a partner to the core development team and be assets in their community. Particularly, we are looking to add value in seven key areas:</p>
-                  <ul class="list">
-                    <li>Legal &amp; Regulatory</li>
-                    <li>Smart contract security audits and code reviews</li>
-                    <li>Community management and PR</li>
-                    <li>Crypto economic design and token distribution mechanisms</li>
-                    <li>Recruiting and executive coaching </li>
-                    <li>Cash management and OTC</li>
-                    <li>Business development (connecting with other projects and exchanges)</li>
-                  </ul>
-                  <p>We are committed to supporting our portfolio networks in their early days by providing marketplace liquidity, governance, and other services where a crypto-native investor can add value; this requires the confluence of capital, technical ability, and understanding of how these networks function. We take this approach for three primary reasons;</p>
-                  <ul>
-                    <li>It allows our investment thesis to evolve as we work very closely with, and receive information from, professionals within certain sectors of the market;</li>
-                    <li>It will enable us to build our reputation in the blockchain and cryptocurrency industry as value-add investors, and;</li>
-                    <li>It gives us insight into how we can expand or consolidate individual positions over time;</li>
-                  </ul>
-                  <p>When considering an investment, we analyze the projects team, economic structure, market, product, technology, and more, and if we do decide to invest, we are constantly re-evaluating these metrics as the company makes progress.</p>
-                  <p><a href="#" class="link">Suite of Index Funds </a></p>
+                <div class="form-control">
+                  <input type="text" placeholder="Email address" data-validation="email" data-validation-error-msg="Please fill in right email address" id="email">
                 </div>
-                <div class="abouttabs__container" data-tabs-container="thesis"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, dolorem. Voluptatibus consequuntur, quisquam vel ut ea reprehenderit. Magni, asperiores, repellendus. Ex, earum ad illo aut quaerat tempora id sapiente repellat consequuntur dolores officia eius sunt esse explicabo voluptatem, pariatur debitis architecto, ipsam vel harum assumenda fuga amet. Rerum cupiditate aut beatae officia magnam ipsum amet a reprehenderit voluptatibus quis et, laborum, incidunt? Cum iste harum sed voluptates dicta sint molestiae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, dolorem. Voluptatibus consequuntur, quisquam vel ut ea reprehenderit. Magni, asperiores, repellendus. Ex, earum ad illo aut quaerat tempora id sapiente repellat consequuntur dolores officia eius sunt esse explicabo voluptatem, pariatur debitis architecto, ipsam vel harum assumenda fuga amet. Rerum cupiditate aut beatae officia magnam ipsum amet a reprehenderit voluptatibus quis et, laborum, incidunt? Cum iste harum sed voluptates dicta sint molestiae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, dolorem. Voluptatibus consequuntur, quisquam vel ut ea reprehenderit. Magni, asperiores, repellendus. Ex, earum ad illo aut quaerat tempora id sapiente repellat consequuntur dolores officia eius sunt esse explicabo voluptatem, pariatur debitis architecto, ipsam vel harum assumenda fuga amet. Rerum cupiditate aut beatae officia magnam ipsum amet a reprehenderit voluptatibus quis et, laborum, incidunt? Cum iste harum sed voluptates dicta sint molestiae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, dolorem. Voluptatibus consequuntur, quisquam vel ut ea reprehenderit. Magni, asperiores, repellendus. Ex, earum ad illo aut quaerat tempora id sapiente repellat consequuntur dolores officia eius sunt esse explicabo voluptatem, pariatur debitis architecto, ipsam vel harum assumenda fuga amet. Rerum cupiditate aut beatae officia magnam ipsum amet a reprehenderit voluptatibus quis et, laborum, incidunt? Cum iste harum sed voluptates dicta sint molestiae! </div>
-              </div>
+                <div class="form-control">
+                  <textarea placeholder="Type message…" id="message"></textarea>
+                </div>
+                <div class="form__confirm">
+                  <!-- begin input -->
+                  <label class="checkbox">
+                    <input type="checkbox" name="checkbox" data-validation="required">
+                    <span class="checkbox__text">I confirm Privacy policy and Terms of Use</span>
+                  </label>
+                  <!-- end input -->
+                </div>
+                <div class="form__footer">
+                  <button class="btn btn_black" type="submit">Submit <svg class="icon icon-right-arrow">
+                      <use xlink:href="img/sprite.svg#icon-right-arrow"></use>
+                    </svg>
+                  </button>
+                  <div class="js-form-success form-success">Message submit</div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
-        <!-- end tabs -->
       </div>
-      <!-- begin about -->
-      <div class="about" style="background-image: url(./img/mountain.svg);">
-        <div class="about__inner inner" data-scroll-trigger="50" data-duration-anim=".7" data-delay-anim="0.3" data-anim-group>
-          <div data-anim="from-bottom">
-            <h2 class="about__title title color-red">ABOUT FUND</h2>
-            <p>WhitePark Capital is a hedge fund focused on digital assets and startups in the blockchain space. We believe that Blockchain is becoming a fundamental breakthrough in IT - similar to how personal computers, Internet, mobile phones and social media disrupted existing systems, created new markets and business models.</p>
-            <div class="about__footer"><a href="#" class="btn">Read our Thesis</a></div>
-          </div>
-        </div>
-      </div>
-      <!-- end about -->
+      <!-- end contacts -->
       <!-- begin footer -->
       <div class="footer" data-scroll-trigger="50" data-duration-anim=".7" data-delay-anim="0.3" data-anim-group>
         <div class="footer__inner inner" data-anim="from-bottom">

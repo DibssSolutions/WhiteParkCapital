@@ -5,7 +5,7 @@ title: Index page
 
 {% block content %}
 	
-	{{ header.block({active: 2, absolute: true}) }}
+	{{ header.block({active: 1, absolute: true}) }}
 	<!-- begin hero -->
 	<div class="hero js-hero">
 		<div class="hero__back">
@@ -26,8 +26,9 @@ title: Index page
 	</div>
 	<!-- end hero -->
 	<!-- begin about -->
-	<div class="about" id="about" style="background-image: url(./img/mountain.svg);">
-		<div class="about__inner inner" data-scroll-trigger="50" data-duration-anim=".7" data-delay-anim="0.3" data-anim-group>
+	<div class="about" id="about" data-scroll-trigger="50" data-duration-anim=".7" data-delay-anim="0.5" data-anim-group>
+		<div class="about__bg" style="background-image: url(./img/mountain.svg);" data-anim="from-bottom"></div>
+		<div class="about__inner inner">
 			<div data-anim="from-bottom">
 				<h2 class="about__title title color-red">ABOUT FUND</h2>
 				<p>WhitePark Capital is a hedge fund focused on digital assets and startups in the blockchain space. We believe that Blockchain is becoming a fundamental breakthrough in IT - similar to how personal computers, Internet, mobile phones and social media disrupted existing systems, created new markets and business models.</p>
@@ -40,7 +41,7 @@ title: Index page
 	<div class="section">
 		<div class="section__inner inner" data-scroll-trigger="50" data-duration-anim=".7" data-delay-anim="0.3" data-anim-group>
 			<div class="section__row row">
-				<div class="section__col section__col_img col col-6 col-md-12">
+				<div class="section__col section__col_img col col-6 col-md-12" data-anim="from-bottom">
 					<div class="section__img">
 						<img src="./img/illustration.svg" alt="img">
 					</div>
@@ -64,15 +65,15 @@ title: Index page
 	<!-- end section -->
 	<!-- begin section -->
 	<div class="section section_principles">
-		<div class="section__inner inner" data-scroll-trigger="50" data-duration-anim=".7" data-delay-anim="0.3" data-anim-group>
-			<div class="section__row row" data-anim="from-bottom">
-				<div class="section__col col col-6 col-md-12">
+		<div class="section__inner inner">
+			<div class="section__row row" data-scroll-trigger="50" data-duration-anim=".7" data-delay-anim="0.5" data-anim-group>
+				<div class="section__col col col-6 col-md-12" data-anim="from-bottom">
 					<div class="section__content">
 						<h2 class="section__title title color-red">MAIN PRINCIPLES</h2>
 						<h3 class="section__title-lg title-lg">Adding value to <br>entrepreneurs and clients</h3>
 					</div>
 				</div>
-				<div class="section__col col col-6 col-md-12">
+				<div class="section__col col col-6 col-md-12" data-anim="from-bottom">
 					<h4 class="section__title-md title-md">Blockchain technology and cryptocurrency networks are decentralizing the current online user network/private data layer of the internet, collapsing production costs, eliminating data monopolies, and catalyzing the next wave of innovation. </h4>
 					<div class="section__text">
 						<p> Therefore, we are investing in decentralized blockchain protocols with a cryptocurrency native to the protocol.</p>
@@ -264,11 +265,11 @@ title: Index page
 							<p>As well as help build and scale the coin, project, or token in areas like governance, cryptoeconomic design, community management, strategy, and organizational development.</p>
 						</div>
 						<div class="section__readmore">
-							<a href="#" class="readmore">Read more</a>
+							<a href="content-page.html#what" class="readmore">Read more</a>
 						</div>
 					</div>
 				</div>
-				<div class="section__col section__col_img col col-6 col-md-12">
+				<div class="section__col section__col_img col col-6 col-md-12" data-anim="from-bottom">
 					<div class="section__img">
 						<img src="./img/illustration-2.svg" alt="img">
 					</div>
@@ -285,7 +286,7 @@ title: Index page
 				<h3 class="section__title-lg title-lg">All of the fund’s investment decisions are based on in-depth research and analysis.</h3>
 			</div>
 			<!-- begin slider -->
-			<div class="section__slider slider js-slider">
+			<div class="section__slider slider js-slider" data-anim="from-bottom">
 				{% for item in [
 					{
 						logo: 'jp-morgan',

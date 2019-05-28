@@ -8,46 +8,138 @@ title: Team page
 	{{ header.block({active: 2}) }}
 	<!-- begin team -->
 	<div class="team">
-		<div class="team__head text-center">
-			<h2 class="team__title title">WHITE PARK CAPITAL TEAM</h2>
-			<h3 class="team__title-lg title-lg">The team at White Park Capital is driven by three critical forces: entrepreneurship, passion for technology, and quantitative analysis.</h3>
-		</div>
-		<div class="team__list">
-			<!-- begin collaborator -->
-			<div class="collaborator">
-				<div class="collaborator__img">
-					<img src="./img/" alt="img">
-				</div>
-				<div class="collaborator__wrap">
-					<div class="collaborator__head">
-						<h3 class="collaborator__title-lg title-lg">Andrei Ponomarev</h3>
-						<ul class="collaborator__soc soc">
-							{% for icon in ['twitter','facebook'] %}
-							<li><a href="#">{{ mixins.icon(icon) }}</a></li>
-							{% endfor %}
-						</ul>
-					</div>
-					<p>Co-founder and managing partner of WhitePark Capital</p>
-					<h4 class="collaborator__title-md title-md">Andrei is an entrepreneur and an early-stage investor since 2011</h4>
-					<p>With a passion for technology, Andrei first entered the blockchain space in 2013, and ever since, he and his team have launched several successful startups related to p2p gaming platforms and digital assets. In the past three years, Andrei has also successfully managed a portfolio of private investors with a total value of over $120 million. Before co-founding WhitePark Capital, Andrei worked on startups’ strategic planning and developed integrated loyalty systems for corporate client acquisition and retention.</p>
-				</div>
+		<div class="team__inner inner">
+			<div class="team__head text-center" data-scroll-trigger="50" data-delay-anim="0.0000001">
+				<h2 class="team__title title color-red" data-anim="from-bottom">WHITE PARK CAPITAL TEAM</h2>
+				<h3 class="team__title-lg title-lg" data-anim="from-bottom">The team at White Park Capital is driven by three critical forces: entrepreneurship, passion for technology, and quantitative analysis.</h3>
 			</div>
-			<!-- end collaborator -->
-			<!-- begin collaborator -->
-			<div class="collaborator">
-				<div class="collaborator__wrap">
-					<div class="collaborator__head">
-						<h3 class="collaborator__title-lg title-lg"></h3>
+			<div class="team__list">
+				{% for item in [
+					{
+						titleLg: 'Andrei Ponomarev',
+						headText: 'Co-founder and managing partner of WhitePark Capital',
+						titleMd: 'Andrei is an entrepreneur and an early-stage investor since 2011',
+						text: 'With a passion for technology, Andrei first entered the blockchain space in 2013, and ever since, he and his team have launched several successful startups related to p2p gaming platforms and digital assets. In the past three years, Andrei has also successfully managed a portfolio of private investors with a total value of over $120 million. Before co-founding WhitePark Capital, Andrei worked on startups’ strategic planning and developed integrated loyalty systems for corporate client acquisition and retention.'
+					},
+					{
+						titleLg: 'Vladislav Shabanov',
+						headText: 'Co-founder and managing partner of WhitePark Capital',
+						titleMd: 'Vlad has an entrepreneurial spirit and a passion for financial markets, corporate finance, and technology.',
+						text: 'He has financial experience with both fundamental and quantitative analysis and is fluent in VBA, Python, R/MATLAB, and C++. Before co-founding WhitePark Capital, Vlad worked at Russell Investments in New York, where he was part of the 9-member Multi-Asset Solutions team that managed $58 billion in pension funds.',
+						textHidden: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet fugit possimus asperiores nemo iusto similique voluptatibus ipsa quia est quis.'
+					},
+					{
+						titleLg: 'Vladimir Vinokurov',
+						headText: 'Partner and CTO at WhitePark Capital',
+						titleMd: 'Mr. Vinokurov is an entrepreneur, blockchain engineer, and software developer with more than 15 years of experience in the Information Technology industry. ',
+						text: 'Before joining WhitePark Capital, Vladimir developed specialized search systems, corporate accounting systems, blockchain-based voting systems, as well as complex and large systems based on Ethereum smart contracts. ',
+						textHidden: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet fugit possimus asperiores nemo iusto similique voluptatibus ipsa quia est quis.'
+					},
+					{
+						titleLg: 'Grant Alaverdyan',
+						headText: 'Founding partner at WhitePark Capital',
+						titleMd: 'Grant facilitates access to new market opportunities for our clients.',
+						text: 'Grant has 6-years of investment banking experience. Prior to founding WhitePark capital, Grant was the Advisor to the CEO of the largest Russian independent Investment Bank, Troika Dialog (acquired by Sberbank of Russia).',
+						textHidden: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet fugit possimus asperiores nemo iusto similique voluptatibus ipsa quia est quis.'
+					},
+					{
+						titleLg: 'Alexei Ponomarev',
+						titleMd: 'Alexei has more than 15 years of experience in building marketing strategies that allow products to be successfully brought to the market, as well as management experience. ',
+						text: 'Ponomarev’s first major business endeavor consisted of creating a comprehensive loyalty program--from scratch-- called Sib Discount, which brought together more than 500 organizations. Afterward, Alexei specialized in the creation and adaptation of viral marketing mechanisms that are used in social media platforms and mobile applications.',
+						textHidden: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet fugit possimus asperiores nemo iusto similique voluptatibus ipsa quia est quis.'
+					}
+				] %}
+				{% if loop.index % 2 == 1 %}
+					<!-- begin collaborator -->
+					<div class="collaborator" data-scroll-trigger="50">
+						<div class="collaborator__img" data-anim="from-bottom">
+							<img src="./img/collaborator-img-{{ loop.index }}.jpg" alt="img">
+						</div>
+						<div class="collaborator__wrap" data-anim="from-bottom">
+							<div class="collaborator__head">
+								<h3 class="collaborator__title-lg title-lg">{{ item.titleLg }}</h3>
+								<ul class="collaborator__soc soc">
+									{% for icon in ['twitter','facebook'] %}
+									<li><a href="#">{{ mixins.icon(icon) }}</a></li>
+									{% endfor %}
+								</ul>
+							</div>
+							{% if item.headText %}<p class="collaborator__text">{{ item.headText }}</p>{% endif %}
+							<h4 class="collaborator__title-md title-md">{{ item.titleMd }}</h4>
+							<div class="collaborator__drop drop js-drop">
+					            <div class="drop__wrap">
+					            	<div class="drop__show">{{ item.text }}</div>
+					                {% if item.textHidden %}
+					                <div class="drop__hidden js-drop-hidden">{{ item.textHidden }}</div>
+					                {% endif %}
+					            </div>
+					            {% if item.textHidden %}
+					            <button class="drop__btn js-open-drop" type="button" data-text-open="Show more" data-text-close="Hide more">
+					            	<span class="drop__btn-text js-drop-btn-text">Show more</span>
+					            </button>
+					            {% endif %}
+					        </div>
+						</div>
 					</div>
-					<p></p>
-					<h4 class="collaborator__title-md title-md"></h4>
-					<p></p>
-				</div>
-				<div class="collaborator__img">
-					<img src="./img/" alt="img">
-				</div>
+					<!-- end collaborator -->
+				{% else %}
+				    <!-- begin collaborator -->
+				    <div class="collaborator" data-scroll-trigger="50">
+				    	<div class="collaborator__wrap" data-anim="from-bottom">
+				    		<div class="collaborator__head">
+				    			<h3 class="collaborator__title-lg title-lg">{{ item.titleLg }}</h3>
+				    			<ul class="collaborator__soc soc">
+				    				{% for icon in ['twitter','facebook'] %}
+				    				<li><a href="#">{{ mixins.icon(icon) }}</a></li>
+				    				{% endfor %}
+				    			</ul>
+				    		</div>
+				    		{% if item.headText %}<p class="collaborator__text">{{ item.headText }}</p>{% endif %}
+				    		<h4 class="collaborator__title-md title-md">{{ item.titleMd }}</h4>
+				    		<div class="collaborator__drop drop js-drop">
+				                <div class="drop__wrap">
+				                	<div class="drop__show">{{ item.text }}</div>
+				                    {% if item.textHidden %}
+				                    <div class="drop__hidden js-drop-hidden">{{ item.textHidden }}</div>
+				                    {% endif %}
+				                </div>
+				                {% if item.textHidden %}
+				                <button class="drop__btn js-open-drop" type="button" data-text-open="Show more" data-text-close="Hide more">
+				                	<span class="drop__btn-text js-drop-btn-text">Show more</span>
+				                </button>
+				                {% endif %}
+				            </div>
+				    	</div>
+				    	<div class="collaborator__img" data-anim="from-bottom">
+				    		<img src="./img/collaborator-img-{{ loop.index }}.jpg" alt="img">
+				    	</div>
+				    </div>
+				    <!-- end collaborator -->
+				{% endif %}
+				{% endfor %}
 			</div>
-			<!-- end collaborator -->
+			<div class="team__form text-center">
+				<form class="form js-form">
+					<div class="form__title title color-red">CONTACT US</div>
+					<div class="form-control">
+						<input type="text" placeholder="Your name" data-validation="required"
+                    data-validation-error-msg="This field is required" id="name">
+					</div>
+					<div class="form-control">
+						<input type="text" placeholder="Email address" data-validation="email" data-validation-error-msg="Please fill in right email address" id="email">
+					</div>
+					<div class="form-control">
+						<textarea placeholder="Type message…" id="message"></textarea>
+					</div>
+					<div class="form__confirm">
+						{{ mixins.checkbox({ text: 'I confirm Privacy policy and Terms of Use', required: true }) }}
+					</div>
+					<div class="form__footer">
+						<button class="btn btn_black" type="submit">Submit{{ mixins.icon('right-arrow') }}</button>
+						<div class="js-form-success form-success">Message submit</div>
+					</div>
+				</form>
+			</div>
 		</div>
 	</div>
 	<!-- end team -->

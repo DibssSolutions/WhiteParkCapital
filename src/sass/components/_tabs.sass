@@ -108,7 +108,7 @@
 		position: relative
 		z-index: 1
 		text-align: center
-		background-color: $white
+		background-color: #F9F9F9
 		display: none
 		+md
 			display: block
@@ -255,3 +255,62 @@
 		&[data-tabs-container="investement"]
 			&:before
 				background-image: linear-gradient(180deg, #78A7EB 0%, #F9F9F9 100%)
+
+.abouttabs
+	&__left
+		margin-top: 10px
+	&__list
+		+sm
+			margin-bottom: 30px
+			display: flex
+			justify-content: center
+			flex-wrap: wrap
+	&__item
+		cursor: pointer
+		+hss
+		opacity: .5
+		+f(14px,700,1.6)
+		transition: opacity .3s, color .3s
+		text-transform: uppercase
+		&:not(:last-child)
+			margin-bottom: 28px
+			+sm
+				margin: 0 20px 5px 0
+		+hover
+			opacity: 1
+			color: $red
+		&.is-active
+			opacity: 1
+			color: $red
+	&__container
+		color: rgba($black, .6)
+		h1,h2,h3,h4,h5,h6
+			color: $black
+			&.color-red
+				color: $red
+		.title-md,
+		.title-mid
+			&:not(:last-child)
+				margin-bottom: 35px
+				+md
+					margin-bottom: 20px
+		p
+			&:not(:last-child)
+				margin-bottom: 23px
+				+md
+					margin-bottom: 15px
+
+.list
+	&:not(:last-child)
+		margin-bottom: 23px
+	li
+		position: relative
+		padding-left: 18px
+		display: block
+		&:before
+			position: absolute
+			content: ''
+			top: 14px
+			left: 0
+			+circle(8)
+			background-color: $red

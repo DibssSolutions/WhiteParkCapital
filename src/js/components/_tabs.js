@@ -14,6 +14,7 @@ export default (() => {
       this.initializeCache();
       this.initializeEvents();
       this.mobDrop();
+      this.locationActiveTab();
     }
 
     initializeCache() {
@@ -69,6 +70,12 @@ export default (() => {
       return containers.filter(`[data-tabs-container="${control.data('tabs-control')}"]`);
     }
 
+    locationActiveTab() {
+      const hash = window.location.hash;
+      if (!hash) return;
+      $(`[data-tabs-control="${hash.slice(1)}"`).trigger('click');
+    }
+
     setActiveTab(control, container) {
       const text = control.text();
       this.cache.main.attr('data-tabs', control.data('tabs-control'));
@@ -90,7 +97,6 @@ export default (() => {
     }
 
   };
-
   $('[data-tabs]').each((i, main) => new Tabs({ main: $(main) }) );
 
 })();

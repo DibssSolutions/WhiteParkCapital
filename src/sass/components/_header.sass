@@ -2,7 +2,7 @@
 	position: relative
 	z-index: 10
 	padding-top: 40px
-	margin-bottom: 143px
+	margin-bottom: 125px
 	&_abs
 		position: absolute
 		top: 0
@@ -24,6 +24,8 @@
 	&__logo
 		position: relative
 		z-index: 2
+		font-size: 0
+		height: 100%
 	&__nav
 		padding: 0 20px
 		+md
@@ -59,9 +61,26 @@
 			color: $red
 		.header_abs &
 			color: $white
+	.color-red
+		color: $red
+
 .logo
+	vertical-align: top
+	display: inline-block
 	img
 		display: block
+	svg
+		display: block
+		max-width: 100%
+		height: auto
+		path:not(.logo-sm)
+			fill: $black
+			transition: fill .3s
+			.header_abs &
+				fill: $white
+			.is-open-menu &
+				+md
+					fill: $white
 	&__text
 		display: none
 .nav
@@ -91,6 +110,7 @@
 			opacity: 1
 		+md
 			opacity: 1
+			color: $white
 		&.is-active
 			opacity: 1
 			&:before
@@ -125,11 +145,15 @@
 		position: absolute
 		width: 17px
 		left: 0
-		border-bottom: 2px solid $white
+		border-bottom: 2px solid $black
 		border-radius: 2px
-		transition: transform .3s, opacity .3s
+		transition: transform .3s, opacity .3s, border-color .3s
 		backface-visibility: hidden
 		will-change: transform
+		.header_abs &
+			border-color: $white
+		.is-open-menu &
+			border-color: $white
 		&:first-child
 			top: 0
 			transform-origin: top left

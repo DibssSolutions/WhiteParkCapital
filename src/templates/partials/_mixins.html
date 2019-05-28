@@ -23,7 +23,7 @@
 {% macro checkbox(props) %}
 <!-- begin input -->
 <label class="{% if props.radio %}radio{% else %}checkbox{% endif %}{% if props.class %} {{ props.class }}{% endif %}">
-	<input type="{% if props.radio %}radio{% else %}checkbox{% endif %}" name="{{ props.name or 'checkbox' }}"{% if props.checked %} checked{% endif %}>
+	<input type="{% if props.radio %}radio{% else %}checkbox{% endif %}" name="{{ props.name or 'checkbox' }}"{% if props.checked %} checked{% endif %}{% if props.required %} data-validation="required"{% endif %}>
 	<span class="{% if props.radio %}radio{% else %}checkbox{% endif %}__text">{{ props.text or 'checkbox' }}</span>
 </label>
 <!-- end input -->

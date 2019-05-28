@@ -7,3 +7,5 @@ PageList:
   ready: 100
 - file: content-page.html
   ready: 100
+- file: contacts.html
+  ready: 100
