@@ -16,10 +16,9 @@ $('.js-form').on('submit', function(e) {
     url: '../send-email.php',
     data: data,
     success: () => {
-    	const successBlock = $('.js-form-success', $(this));
-    	successBlock.addClass(ACTIVE);
+    	$(this).addClass('is-success');
     	$(this)[0].reset();
-    	setTimeout(() => {successBlock.removeClass(ACTIVE);}, 3000);
+    	setTimeout(() => {$(this).removeClass('is-success');}, 3000);
     }
   });
 });

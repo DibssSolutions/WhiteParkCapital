@@ -6,6 +6,26 @@
 		+fadein
 
 .form
+	&.is-success
+		.btn.btn_black[type="submit"]
+			color: $black
+			&:before
+				+fadein
+	.btn.btn_black[type="submit"]
+		position: relative
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			left: 50%
+			width: 18px
+			height: 13px
+			margin: -7px 0 0 -9px
+			+fadeout(.3s)
+			background-image: url(../img/check.svg)
+			background-repeat: no-repeat
+			background-position: 0 0
+			background-size: contain
 	&__title
 		margin-bottom: 35px
 	&__confirm
@@ -34,7 +54,7 @@
 		border: none
 		border-radius: 5px
 		display: block
-		transition: border-color .3s
+		transition: border-color .3s, color .3s
 		border: 1px solid transparent
 		background-color: $white
 		&::placeholder
@@ -43,23 +63,23 @@
 			&::placeholder
 				font-size: 0
 		&.error
+			color: $red
 			border-color: $red
+			&::placeholder
+				color: $red
 	textarea
 		resize: none
 		height: 150px
-	.form-error
-		position: absolute
-		top: 100%
-		left: 0
-		width: 100%
 
 .form-error
-	padding: 4px 20px
+	margin-top: 10px
+	padding: 4px 10px
 	color: $red
 	text-align: left
-	font-size: 10px
-	text-transform: uppercase
+	+f(16px,400,1.25)
 	line-height: 1.2
+	border-radius: 5px
+	background-color: rgba($red, .1)
 	display: block
 
 .checkbox

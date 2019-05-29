@@ -1,17 +1,22 @@
 .footer
 	padding: 93px 0 97px
-	background-image: url(../img/footer-bg-gray.svg)
-	background-position: 68% 223px
-	background-repeat: no-repeat
 	+sm
 		padding: 72px 0
 		text-align: center
-		background: none
 	a
 		color: $black
 		transition: opacity .3s
 		+hover
 			opacity: .6
+	&__bg
+		position: absolute
+		left: 50%
+		bottom: 0
+		margin-left: -845px
+		+sm
+			display: none
+		img
+			display: block
 	&__col-left,
 	&__col-right
 		display: flex

@@ -157,7 +157,7 @@
 		display: flex
 	&__item
 		position: relative
-		padding: 7px 37px 13px
+		padding: 10px 37px
 		+hss
 		+f(16px,400,48px)
 		letter-spacing: .02em
@@ -230,7 +230,6 @@
 			transition: opacity .3s
 			vertical-align: middle
 			display: inline-block
-	&__wrap
 	&__container
 		position: relative
 		&:before
@@ -257,8 +256,14 @@
 				background-image: linear-gradient(180deg, #78A7EB 0%, #F9F9F9 100%)
 
 .abouttabs
+	.head
+		max-width: 600px
+		+sm
+			max-width: 100%
 	&__left
-		margin-top: 10px
+		margin-top: 173px
+		+sm
+			margin-top: 0
 	&__list
 		+sm
 			margin-bottom: 30px
