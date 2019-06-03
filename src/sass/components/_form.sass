@@ -39,6 +39,9 @@
 			top: 100%
 			margin-top: 5px
 			width: 100%
+		.btn
+			+sm
+				width: 100%
 .form-control
 	position: relative
 	&:not(:first-child)
@@ -60,8 +63,13 @@
 		&::placeholder
 			color: rgba($black, .3)
 		&:focus
+			border-color: #E0E0E0
 			&::placeholder
 				font-size: 0
+		+hover
+			border-color: #E0E0E0
+		// &.is-filled
+		// 	border-color: #E0E0E0
 		&.error
 			color: $red
 			border-color: $red
