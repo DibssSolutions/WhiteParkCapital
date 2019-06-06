@@ -95,10 +95,10 @@ title: Index page
 					</div>
 					<ul class="tabs__list md-hide">
 						<li class="tabs__item is-active" data-tabs-control="investing"><span>Long term Investing</span></li>
+						<li class="tabs__item" data-tabs-control="investement"><span>Investement Vehicles</span></li>
 						<li class="tabs__item" data-tabs-control="tools"><span>Risk management tools</span></li>
 						<li class="tabs__item" data-tabs-control="custodianship"><span>Custodianship</span></li>
 						<li class="tabs__item" data-tabs-control="electronic"><span>Electronic Signatures <br>Made Easy</span></li>
-						<li class="tabs__item" data-tabs-control="investement"><span>Investement Vehicles</span></li>
 					</ul>
 				</div>
 			</div>
@@ -124,7 +124,7 @@ title: Index page
 								</div>
 								<div class="section__col section__col_img col col-6 col-md-12">
 									<div class="section__img">
-										<img src="./img/tabs-illustration.svg" alt="img">
+										<img src="./img/illustration-1.svg" alt="img">
 									</div>
 								</div>
 							</div>
@@ -153,7 +153,7 @@ title: Index page
 								</div>
 								<div class="section__col section__col_img col col-6 col-md-12">
 									<div class="section__img">
-										<img src="./img/tabs-illustration.svg" alt="img">
+										<img src="./img/illustration-4.svg" alt="img">
 									</div>
 								</div>
 							</div>
@@ -182,7 +182,7 @@ title: Index page
 								</div>
 								<div class="section__col section__col_img col col-6 col-md-12">
 									<div class="section__img">
-										<img src="./img/tabs-illustration.svg" alt="img">
+										<img src="./img/illustration-5.svg" alt="img">
 									</div>
 								</div>
 							</div>
@@ -211,7 +211,7 @@ title: Index page
 								</div>
 								<div class="section__col section__col_img col col-6 col-md-12">
 									<div class="section__img">
-										<img src="./img/tabs-illustration.svg" alt="img">
+										<img src="./img/illustration-6.svg" alt="img">
 									</div>
 								</div>
 							</div>
@@ -240,7 +240,7 @@ title: Index page
 								</div>
 								<div class="section__col section__col_img col col-6 col-md-12">
 									<div class="section__img">
-										<img src="./img/tabs-illustration.svg" alt="img">
+										<img src="./img/illustration-3.svg" alt="img">
 									</div>
 								</div>
 							</div>
@@ -259,7 +259,7 @@ title: Index page
 				<div class="section__col col col-6 col-md-12">
 					<div class="section__content" data-anim="from-bottom">
 						<h2 class="section__title title color-red">WHAT WE DO?</h2>
-						<h3 class="section__title-lg title-lg">Research, Invest, <br>Add Value, Support </h3>
+						<h3 class="section__title-lg title-lg">Research -> Invest -> <br>Add Value -> Support</h3>
 						<h4 class="section__title-md title-md">At WhitePark Capital, we invest in blockchain and cryptocurrency projects in which we can create value through our network and expertise</h4>
 						<div class="section__text">
 							<p>As well as help build and scale the coin, project, or token in areas like governance, cryptoeconomic design, community management, strategy, and organizational development.</p>
@@ -289,33 +289,37 @@ title: Index page
 			<div class="section__slider slider js-slider" data-anim="from-bottom">
 				{% for item in [
 					{
-						logo: 'jp-morgan',
-						text: 'Investement fund'
+						logo: 'riveles-wahab-llp',
+						text: 'Riveles Wahab LLP'
 					},
 					{
-						logo: 'morgan-stanley',
-						text: 'Investement fund'
-					},
-					{
-						logo: 'credit-suisse',
 						classImg: 'vertical-top',
-						text: 'Investement fund'
+						logo: 'tower-fund-services',
+						text: 'Tower Fund Services'
 					},
 					{
-						logo: 'morgan-stanley',
-						text: 'Investement fund'
+						logo: 'bmo-harris-bank',
+						text: 'BMO Harris Bank'
 					},
 					{
-						logo: 'credit-suisse',
+						logo: 'orrick',
+						text: 'Orrick'
+					},
+					{
+						logo: 'route-fire',
+						text: 'Route Fire'
+					},
+					{
+						logo: 'richey-may-co',
 						classImg: 'vertical-top',
-						text: 'Investement fund'
+						text: 'Richey May & Co'
 					}
 				] %}
 				<div class="slider__slide">
 					<!-- begin partner -->
 					<div class="partner">
 						<div class="partner__logo">
-							<img src="./img/{{ item.logo }}.svg"{% if item.classImg %} class="{{ item.classImg }}"{% endif %} alt="partner-logo">
+							<img src="./img/{{ item.logo }}.png"{% if item.classImg %} class="{{ item.classImg }}"{% endif %} alt="partner-logo">
 						</div>
 						<div class="partner__text">{{ item.text }}</div>
 					</div>

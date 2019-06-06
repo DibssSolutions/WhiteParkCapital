@@ -6,3 +6,4 @@ import './_menu';
 import './_drop';
 import './_form';
 import './_map';
+import './_modal';

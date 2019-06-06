@@ -58,16 +58,16 @@
 		border-radius: 5px
 		display: block
 		transition: border-color .3s, color .3s
-		border: 1px solid transparent
+		border: 1px solid #E0E0E0
 		background-color: $white
 		&::placeholder
 			color: rgba($black, .3)
 		&:focus
-			border-color: #E0E0E0
+			border-color: darken(#E0E0E0, 30%)
 			&::placeholder
 				font-size: 0
 		+hover
-			border-color: #E0E0E0
+			border-color: darken(#E0E0E0, 30%)
 		// &.is-filled
 		// 	border-color: #E0E0E0
 		&.error

@@ -1,0 +1,49 @@
+[data-modal]
+	background-color: rgba($black, .6)
+	position: fixed
+	z-index: -1
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	opacity: 0
+	visibility: hidden
+	min-width: 320px
+	padding: 40px
+	+vertical
+	+gpu
+	overflow: auto
+	transition: opacity 0.3s, visibility 0.3s, z-index 0.3s
+	+sm
+		padding: 0 10px
+		width: 100%
+		margin: 0 auto
+	&.is-open
+		opacity: 1
+		visibility: visible
+		z-index: 100
+	
+[data-modal-container]
+	position: relative
+	z-index: 1
+	vertical-align: middle
+	display: inline-block
+
+.modal
+	&__container
+		padding: 40px 40px 59px 
+		width: 100%
+		max-width: 515px
+		font-size: 16px
+		border-radius: 8px
+		box-shadow: 0 3px 5px 0 rgba(0,0,0,0.05)
+		background-color: $white
+	&__title
+		margin-bottom: 14px
+	&__text
+		margin: 0 auto
+		max-width: 343px
+		&:not(:last-child)
+			margin-bottom: 26px
+
+
