@@ -69,7 +69,7 @@
                 <a href="contacts.html" class="nav__link is-active">Contacts</a>
               </li>
               <li class="nav__item md-show">
-                <a href="#" class="nav__link">Login</a>
+                <a href="#" class="nav__link" data-modal-control="registration-unavailable">Login</a>
               </li>
               <li class="nav__item md-show">
                 <a href="#" class="nav__link color-red">Invest</a>
@@ -78,7 +78,7 @@
           </nav>
           <!-- end nav -->
           <div class="header__login md-hide">
-            <a href="#" class="header__link">Login</a>
+            <a href="#" class="header__link" data-modal-control="registration-unavailable">Login</a>
             <a href="#" class="btn">Invest</a>
           </div>
           <button class="btn-menu js-btn-menu" type="button">
@@ -109,8 +109,8 @@
               <h4 class="contacts__title title color-red">ADDRESS</h4>
               <p>1177 Avenue of the Americas, New York 10036</p>
               <h4 class="contacts__title title color-red">GET IN TOUCH</h4>
-              <p>+1(646)596-5856</p>
-              <p>contact@whiteparkc.capital</p>
+              <p>+1 (646) 596-5856</p>
+              <p>contact@whitepark.capital</p>
             </div>
             <div class="contacts__col col col-6 col-md-12">
               <form class="form js-form">
@@ -176,8 +176,8 @@
             <div class="footer__col-right col">
               <div class="footer__top-wrap">
                 <h4 class="footer__title title color-red">GET IN TOUCH</h4>
-                <div class="footer__link"><a href="tel:+16465965856">+1(646)596-5856</a></div>
-                <div class="footer__link"><a href="mailto:contact@whiteparkc.capital">contact@whiteparkc.capital</a></div>
+                <div class="footer__link"><a href="tel:+16465965856">+1 (646) 596-5856</a></div>
+                <div class="footer__link"><a href="mailto:contact@whitepark.capital">contact@whitepark.capital</a></div>
                 <h4 class="footer__title title color-red">EXPLORE</h4>
                 <ul class="footer__nav">
                   <li><a href="page.html">Home</a></li>
@@ -217,6 +217,13 @@
       <!-- end footer -->
     </div>
     <!-- END content -->
+    <div class="modal" data-modal="registration-unavailable">
+      <div class="modal__container" data-modal-container>
+        <h3 class="modal__title title-lg">Registration unavailable </h3>
+        <div class="modal__text">Unfortunately, registration on platform is temporarily closed. You can leave your mail and we will inform you when registration resumes.</div>
+        <button class="btn btn_black" type="button" data-modal-close>Ok, thank you</button>
+      </div>
+    </div>
     <!-- BEGIN scripts -->
     <script src="https://maps.googleapis.com/maps/api/js?key=&amp;"></script>
     <script type="text/javascript" src="js/app.js"></script>
