@@ -51,13 +51,14 @@
 						href: 'team.html'
 					},{
 						title: 'Medium',
-						href: 'https://medium.com/whitepark'
+						href: 'https://medium.com/whitepark',
+						attr: true
 					},{
 						title: 'Contacts',
 						href: 'contacts.html'
 				}] %}
 				<li class="nav__item">
-					<a href="{{ item.href }}" class="nav__link{% if props.active === loop.index %} is-active{% endif %}">{{ item.title }}</a>
+					<a href="{{ item.href }}" class="nav__link{% if props.active === loop.index %} is-active{% endif %}"{% if item.attr %} target="_blank"{% endif %}>{{ item.title }}</a>
 				</li>
 				{% endfor %}
 				<li class="nav__item md-show">
